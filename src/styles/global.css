@@ -11,6 +11,10 @@
   --color-brand-forest-dark: #163A2B;
   --color-brand-orange-light: #D97A4A;
   --color-brand-orange-dark: #A04A22;
+  --color-brand-amber: #D4A017;
+  --color-brand-amber-light: #E8BC4A;
+  --color-brand-cream: #FAF7ED;
+  --color-brand-slate: #1A1D23;
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
@@ -29,9 +33,31 @@ body {
   margin: 0;
   background-color: var(--bg);
   color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Dark mode (default) */
 :root {
+  color-scheme: dark;
+  --bg: #0B0B0B;
+  --bg-secondary: #2A2A2A;
+  --bg-tertiary: #3F3F3F;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --text-primary: rgba(255, 255, 255, 0.9);
+  --text-secondary: rgba(255, 255, 255, 0.5);
+  --text-tertiary: rgba(255, 255, 255, 0.3);
+  --accent-primary: #1F4D3A;
+  --accent-primary-light: #2A6B4F;
+  --accent-secondary: #C65D2E;
+  --accent-warm: #D4A017;
+  --bg-warm: #141618;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --nav-bg: rgba(11, 11, 11, 0.88);
+}
+
+/* Light mode */
+:root.light {
   color-scheme: light;
   --bg: #F5F5F2;
   --bg-secondary: #EAEAE6;
@@ -44,6 +70,8 @@ body {
   --accent-primary: #1F4D3A;
   --accent-primary-light: #2A6B4F;
   --accent-secondary: #C65D2E;
+  --accent-warm: #D4A017;
+  --bg-warm: #FAF7ED;
   --border-subtle: rgba(0, 0, 0, 0.04);
   --nav-bg: rgba(245, 245, 242, 0.88);
 }
@@ -54,9 +82,14 @@ body {
   -webkit-backdrop-filter: blur(40px) saturate(150%);
   border: 1px solid var(--card-border);
   box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.03) inset,
-    0 2px 20px rgba(0, 0, 0, 0.04),
-    0 1px 3px rgba(0, 0, 0, 0.06);
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+:root.light .glass-card {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset,
+    0 2px 20px rgba(0, 0, 0, 0.05);
 }
 
 .gradient-text {
@@ -73,14 +106,25 @@ body {
   background-clip: text;
 }
 
+.gradient-text-warm {
+  background: linear-gradient(135deg, #D4A017, #E8BC4A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .heading-tight {
   letter-spacing: -0.025em;
   font-weight: 700;
 }
 
 .grid-dot-pattern {
-  background-image: radial-gradient(circle, rgba(31, 77, 58, 0.10) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(31, 77, 58, 0.15) 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+:root.light .grid-dot-pattern {
+  background-image: radial-gradient(circle, rgba(31, 77, 58, 0.12) 1px, transparent 1px);
 }
 
 .topo-pattern {
@@ -196,6 +240,9 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+:root.light .card-hover:hover {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 

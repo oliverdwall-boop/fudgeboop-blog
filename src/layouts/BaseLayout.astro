@@ -65,6 +65,16 @@ const fullTitle = title === 'Fudgeboop' ? title : `${title} — Fudgeboop`;
       rel="stylesheet"
     />
 
+    <!-- Theme detection (prevents flash of wrong theme) -->
+    <script is:inline>
+      (function() {
+        var s = localStorage.getItem('fudgeboop-theme');
+        if (s === 'light' || (!s && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+          document.documentElement.classList.add('light');
+        }
+      })();
+    </script>
+
     <slot name="head" />
   </head>
   <body class="min-h-screen flex flex-col">
