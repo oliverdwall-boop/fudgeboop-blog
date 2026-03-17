@@ -44,7 +44,7 @@ const formattedDate = pubDate.toLocaleDateString('en-GB', {
       {tags && tags.length > 0 && (
         <div class="flex flex-wrap gap-2 mt-4">
           {tags.map((tag) => (
-            <span class="text-xs px-2.5 py-1 rounded-full font-mono" style="background: rgba(31,77,58,0.10); color: #2A6B4F;">
+            <span class="text-xs px-2.5 py-1 rounded-full font-mono" style="background: rgba(31,77,58,0.10); color: var(--accent-primary-light);">
               {tag}
             </span>
           ))}

@@ -42,8 +42,10 @@ body {
   --text-secondary: rgba(11, 11, 11, 0.55);
   --text-tertiary: rgba(11, 11, 11, 0.3);
   --accent-primary: #1F4D3A;
+  --accent-primary-light: #2A6B4F;
   --accent-secondary: #C65D2E;
   --border-subtle: rgba(0, 0, 0, 0.04);
+  --nav-bg: rgba(245, 245, 242, 0.88);
 }
 
 .glass-card {
@@ -102,22 +104,23 @@ body {
   margin-bottom: 0.75em;
 }
 
-.prose h1 { font-size: 2.25rem; }
-.prose h2 { font-size: 1.75rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem; }
-.prose h3 { font-size: 1.375rem; font-weight: 600; }
+.prose h1 { font-size: 2.5rem; }
+.prose h2 { font-size: 2rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem; }
+.prose h3 { font-size: 1.5rem; font-weight: 600; }
 
 .prose p {
   margin-bottom: 1.25em;
 }
 
 .prose a {
-  color: #2A6B4F;
+  color: var(--accent-primary-light);
   text-decoration: underline;
   text-underline-offset: 2px;
+  transition: color 150ms ease;
 }
 
 .prose a:hover {
-  color: #1F4D3A;
+  color: var(--accent-primary);
 }
 
 .prose ul, .prose ol {
@@ -135,7 +138,7 @@ body {
 }
 
 .prose blockquote {
-  border-left: 3px solid #1F4D3A;
+  border-left: 3px solid var(--accent-primary);
   padding-left: 1em;
   margin: 1.5em 0;
   color: var(--text-secondary);
@@ -189,7 +192,7 @@ body {
 
 /* Card hover lift */
 .card-hover {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 150ms ease, box-shadow 150ms ease;
 }
 .card-hover:hover {
   transform: translateY(-2px);
@@ -203,4 +206,12 @@ body {
 }
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out both;
+}
+
+/* Focus-visible */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
