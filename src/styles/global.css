@@ -32,18 +32,18 @@ body {
 }
 
 :root {
-  color-scheme: dark;
-  --bg: #0B0B0B;
-  --bg-secondary: #2A2A2A;
-  --bg-tertiary: #3F3F3F;
-  --card-bg: rgba(255, 255, 255, 0.03);
-  --card-border: rgba(255, 255, 255, 0.08);
-  --text-primary: rgba(255, 255, 255, 0.9);
-  --text-secondary: rgba(255, 255, 255, 0.5);
-  --text-tertiary: rgba(255, 255, 255, 0.3);
+  color-scheme: light;
+  --bg: #F5F5F2;
+  --bg-secondary: #EAEAE6;
+  --bg-tertiary: #DDDDD8;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(0, 0, 0, 0.06);
+  --text-primary: #0B0B0B;
+  --text-secondary: rgba(11, 11, 11, 0.55);
+  --text-tertiary: rgba(11, 11, 11, 0.3);
   --accent-primary: #1F4D3A;
   --accent-secondary: #C65D2E;
-  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-subtle: rgba(0, 0, 0, 0.04);
 }
 
 .glass-card {
@@ -52,8 +52,9 @@ body {
   -webkit-backdrop-filter: blur(40px) saturate(150%);
   border: 1px solid var(--card-border);
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
-    0 2px 20px rgba(0, 0, 0, 0.1);
+    0 0 0 1px rgba(0, 0, 0, 0.03) inset,
+    0 2px 20px rgba(0, 0, 0, 0.04),
+    0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .gradient-text {
@@ -76,12 +77,12 @@ body {
 }
 
 .grid-dot-pattern {
-  background-image: radial-gradient(circle, rgba(31, 77, 58, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(31, 77, 58, 0.10) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
 .topo-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M200 40c-80 0-140 60-160 120s10 130 60 170' fill='none' stroke='rgba(31,77,58,0.12)' stroke-width='1'/%3E%3Cpath d='M200 80c-60 0-110 45-125 95s5 100 45 130' fill='none' stroke='rgba(31,77,58,0.08)' stroke-width='1'/%3E%3Cpath d='M200 120c-40 0-80 30-90 70s0 70 30 90' fill='none' stroke='rgba(31,77,58,0.06)' stroke-width='1'/%3E%3Cpath d='M350 200c0-60-40-120-90-150' fill='none' stroke='rgba(31,77,58,0.10)' stroke-width='1'/%3E%3Cpath d='M320 200c0-45-30-95-70-120' fill='none' stroke='rgba(31,77,58,0.07)' stroke-width='1'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M200 40c-80 0-140 60-160 120s10 130 60 170' fill='none' stroke='rgba(31,77,58,0.22)' stroke-width='1'/%3E%3Cpath d='M200 80c-60 0-110 45-125 95s5 100 45 130' fill='none' stroke='rgba(31,77,58,0.14)' stroke-width='1'/%3E%3Cpath d='M200 120c-40 0-80 30-90 70s0 70 30 90' fill='none' stroke='rgba(31,77,58,0.10)' stroke-width='1'/%3E%3Cpath d='M350 200c0-60-40-120-90-150' fill='none' stroke='rgba(31,77,58,0.18)' stroke-width='1'/%3E%3Cpath d='M320 200c0-45-30-95-70-120' fill='none' stroke='rgba(31,77,58,0.12)' stroke-width='1'/%3E%3C/svg%3E");
   background-size: 400px 400px;
 }
 
@@ -184,4 +185,22 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(128, 128, 128, 0.4);
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Fade-in-up animation */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out both;
 }

@@ -3,6 +3,8 @@ title: "The No-Nonsense Closet Organisation System"
 description: "A step-by-step system for organising any closet, from the initial purge to maintenance. No colour-coded hangers required."
 pubDate: 2026-03-14
 tags: ["closet", "systems", "guide"]
+image: "https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=1200&q=80&auto=format&fit=crop"
+imageAlt: "Well-organised closet with neatly hung clothes and folded items"
 ---
 
 Every closet organisation guide starts the same way: "First, remove everything from your closet." Then they show a photo of someone's entire wardrobe neatly laid out on a king-size bed, sorted by colour, with a cup of coffee artfully placed nearby.

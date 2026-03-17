@@ -3,6 +3,8 @@ title: "Kitchen Storage Solutions for Small Kitchens"
 description: "Practical storage ideas for kitchens under 10 square metres. No renovations needed — just smarter use of the space you already have."
 pubDate: 2026-03-17
 tags: ["kitchen", "small spaces", "storage"]
+image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80&auto=format&fit=crop"
+imageAlt: "Clean organised kitchen with white countertops and neatly arranged storage"
 ---
 
 Small kitchen advice usually falls into two categories: "Renovate your kitchen" (helpful if you have a spare ten grand) or "Get rid of everything" (helpful if you don't cook).

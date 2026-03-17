@@ -9,14 +9,17 @@ const posts = (await getCollection('blog'))
 
 <BaseLayout title="Blog" description="Home organisation tips, product reviews, and smart storage solutions from Fudgeboop.">
   <div class="max-w-5xl mx-auto px-6 py-16">
-    <header class="mb-12">
-      <p class="font-mono text-xs uppercase tracking-widest mb-3" style="color: #2A6B4F;">Blog</p>
-      <h1 class="font-heading text-4xl md:text-5xl heading-tight mb-4" style="color: var(--text-primary);">
-        Organisation tips &amp; reviews
-      </h1>
-      <p class="text-lg max-w-xl leading-relaxed" style="color: var(--text-secondary);">
-        Practical guides and honest product reviews to help you get your home sorted.
-      </p>
+    <header class="mb-12 relative">
+      <div class="topo-pattern absolute inset-0 -mx-6 -mt-4 -mb-2 rounded-2xl opacity-30"></div>
+      <div class="relative">
+        <p class="font-mono text-xs uppercase tracking-widest mb-3" style="color: #2A6B4F;">Blog</p>
+        <h1 class="font-heading text-4xl md:text-5xl heading-tight mb-4" style="color: var(--text-primary);">
+          Organisation tips &amp; reviews
+        </h1>
+        <p class="text-lg max-w-xl leading-relaxed" style="color: var(--text-secondary);">
+          Practical guides and honest product reviews to help you get your home sorted.
+        </p>
+      </div>
     </header>
 
     {posts.length > 0 ? (
