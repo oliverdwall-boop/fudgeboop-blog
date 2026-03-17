@@ -3,8 +3,8 @@ title: "Overlanding Setup for People Who Actually Use Their Rigs"
 description: "What you actually need for your first overlanding build. No $80k buildouts — just the gear that earns its weight."
 pubDate: 2026-03-10
 tags: ["overlanding", "4x4", "gear"]
-image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=1200&q=80&auto=format&fit=crop"
-imageAlt: "4x4 vehicle on a dirt road through open landscape"
+image: "https://images.unsplash.com/photo-1749441184544-69e94fa52703?w=1200&q=80&auto=format&fit=crop"
+imageAlt: "Truck with a rooftop tent set up at a campsite"
 ---
 
 Every overlanding build you see on Instagram costs $60-80k and has gear the owner has used exactly once. Dual swingout bumpers, 40-inch light bars, rooftop tents with annexes bigger than my first flat.

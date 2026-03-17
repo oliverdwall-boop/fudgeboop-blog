@@ -3,8 +3,8 @@ title: "The No-Nonsense Camp Coffee Guide"
 description: "AeroPress, percolator, or instant? A real comparison of camp coffee methods — tested at actual campsites, not a kitchen counter."
 pubDate: 2026-03-17
 tags: ["coffee", "camping", "gear"]
-image: "https://images.unsplash.com/photo-1510672981848-a1c4f1cb5ccf?w=1200&q=80&auto=format&fit=crop"
-imageAlt: "Coffee being brewed outdoors at a campsite with morning light"
+image: "https://images.unsplash.com/photo-1722641277067-a7fba0ad1a59?w=1200&q=80&auto=format&fit=crop"
+imageAlt: "Campfire glowing under a starry sky with mountains in the background"
 ---
 
 Camp coffee advice usually falls into two camps: "Just drink instant" (helpful if you have no standards) or "Bring your entire home setup" (helpful if you enjoy carrying 3kg of coffee gear up a hill).

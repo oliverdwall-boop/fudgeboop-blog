@@ -3,8 +3,8 @@ title: "7 Trail Running Essentials That Aren't Your Shoes"
 description: "Everyone talks about shoes. Here's the other gear that makes or breaks a trail run — tested on actual trails, not treadmills."
 pubDate: 2026-03-14
 tags: ["trail running", "gear", "reviews"]
-image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1200&q=80&auto=format&fit=crop"
-imageAlt: "Trail runner on a mountain path with dramatic scenery"
+image: "https://images.unsplash.com/photo-1504025468847-0e438279542c?w=1200&q=80&auto=format&fit=crop"
+imageAlt: "Trail runner on a mountain edge with snow-capped peaks"
 ---
 
 Every trail running gear list starts with shoes. Fair enough — shoes matter. But you can have perfect shoes and still have a terrible run if the rest of your kit is wrong.
