@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title="Blog" description="Home organisation tips, product reviews, and smart storage solutions from Fudgeboop.">
+  <div class="max-w-5xl mx-auto px-6 py-16">
+    <header class="mb-12">
+      <p class="font-mono text-xs uppercase tracking-widest mb-3" style="color: #2A6B4F;">Blog</p>
+      <h1 class="font-heading text-4xl md:text-5xl heading-tight mb-4" style="color: var(--text-primary);">
+        Organisation tips &amp; reviews
+      </h1>
+      <p class="text-lg max-w-xl leading-relaxed" style="color: var(--text-secondary);">
+        Practical guides and honest product reviews to help you get your home sorted.
+      </p>
+    </header>
+
+    {posts.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.map((post) => (
+          <BlogCard
+            title={post.data.title}
+            description={post.data.description}
+            slug={post.id}
+            pubDate={post.data.pubDate}
+            image={post.data.image}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="glass-card rounded-xl p-12 text-center">
+        <p class="text-lg" style="color: var(--text-secondary);">Posts coming soon.</p>
+      </div>
+    )}
+  </div>
+</BaseLayout>

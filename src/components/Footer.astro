@@ -1,0 +1,37 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t mt-auto py-12" style="border-color: var(--border-subtle);">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <span class="font-heading text-lg font-bold gradient-text block mb-3">Fudgeboop</span>
+        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">
+          Home organisation tips, product reviews, and smart storage solutions to simplify your space.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-heading text-sm font-semibold mb-3" style="color: var(--text-primary);">Pages</h4>
+        <ul class="space-y-2 list-none p-0">
+          <li><a href="/" class="text-sm no-underline transition-colors" style="color: var(--text-secondary);">Home</a></li>
+          <li><a href="/blog/" class="text-sm no-underline transition-colors" style="color: var(--text-secondary);">Blog</a></li>
+          <li><a href="/disclosure/" class="text-sm no-underline transition-colors" style="color: var(--text-secondary);">Affiliate Disclosure</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-heading text-sm font-semibold mb-3" style="color: var(--text-primary);">Legal</h4>
+        <ul class="space-y-2 list-none p-0">
+          <li><a href="/privacy/" class="text-sm no-underline transition-colors" style="color: var(--text-secondary);">Privacy Policy</a></li>
+          <li><a href="/terms/" class="text-sm no-underline transition-colors" style="color: var(--text-secondary);">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t pt-6 flex flex-col md:flex-row items-center justify-between gap-4" style="border-color: var(--border-subtle);">
+      <p class="text-xs" style="color: var(--text-tertiary);">&copy; {year} Fudgeboop. All rights reserved.</p>
+      <p class="text-xs" style="color: var(--text-tertiary);">
+        This site contains affiliate links. See our <a href="/disclosure/" class="underline" style="color: var(--text-secondary);">disclosure</a>.
+      </p>
+    </div>
+  </div>
+</footer>

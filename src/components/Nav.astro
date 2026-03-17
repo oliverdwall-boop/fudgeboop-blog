@@ -1,0 +1,37 @@
+---
+const currentPath = Astro.url.pathname;
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/blog/', label: 'Blog' },
+  { href: '/disclosure/', label: 'Disclosure' },
+];
+---
+
+<nav class="sticky top-0 z-50 border-b" style="background: rgba(11,11,11,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-color: var(--border-subtle);">
+  <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 no-underline">
+      <span class="font-heading text-xl font-bold tracking-tight gradient-text">Fudgeboop</span>
+    </a>
+    <div class="flex items-center gap-6">
+      {links.map(({ href, label }) => (
+        <a
+          href={href}
+          class:list={[
+            'text-sm font-body transition-colors no-underline',
+            currentPath === href || (href !== '/' && currentPath.startsWith(href))
+              ? 'font-medium'
+              : '',
+          ]}
+          style={
+            currentPath === href || (href !== '/' && currentPath.startsWith(href))
+              ? 'color: var(--text-primary)'
+              : 'color: var(--text-secondary)'
+          }
+        >
+          {label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>

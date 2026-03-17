@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogCard from '../components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 6);
+---
+
+<BaseLayout title="Fudgeboop" description="Home organisation tips, product reviews, and smart storage solutions to simplify your space.">
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="topo-pattern absolute inset-0 opacity-60"></div>
+    <div class="relative max-w-5xl mx-auto px-6 py-24 md:py-32">
+      <p class="font-mono text-xs uppercase tracking-widest mb-4" style="color: #2A6B4F;">Home Organisation</p>
+      <h1 class="font-heading text-5xl md:text-6xl heading-tight max-w-3xl mb-6" style="color: var(--text-primary);">
+        Simplify your space.<br />
+        <span class="gradient-text">Organise your life.</span>
+      </h1>
+      <p class="text-lg max-w-xl leading-relaxed mb-8" style="color: var(--text-secondary);">
+        Practical tips, honest product reviews, and smart storage solutions — tested in real homes, not showrooms.
+      </p>
+      <a
+        href="/blog/"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-body font-medium text-sm text-white no-underline transition-colors bg-brand-forest hover:bg-brand-forest-light"
+      >
+        Read the blog
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Latest Posts -->
+  {posts.length > 0 && (
+    <section class="max-w-5xl mx-auto px-6 py-16">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="font-heading text-2xl heading-tight" style="color: var(--text-primary);">Latest posts</h2>
+        <a href="/blog/" class="text-sm font-body no-underline transition-colors" style="color: var(--text-secondary);">
+          View all &rarr;
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.map((post) => (
+          <BlogCard
+            title={post.data.title}
+            description={post.data.description}
+            slug={post.id}
+            pubDate={post.data.pubDate}
+            image={post.data.image}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- About / CTA -->
+  <section class="max-w-5xl mx-auto px-6 py-16">
+    <div class="glass-card rounded-2xl p-8 md:p-12 grid-dot-pattern">
+      <div class="max-w-2xl">
+        <h2 class="font-heading text-2xl heading-tight mb-4" style="color: var(--text-primary);">
+          Why Fudgeboop?
+        </h2>
+        <p class="text-sm leading-relaxed mb-4" style="color: var(--text-secondary);">
+          We test products ourselves before recommending them. No sponsored listicles, no fake reviews. Just honest takes on what actually works for home organisation — from drawer dividers to garage shelving systems.
+        </p>
+        <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">
+          When you buy through our links, we may earn a small commission. This keeps the site running without ads cluttering your reading experience.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
